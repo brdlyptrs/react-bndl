@@ -1,0 +1,24 @@
+{
+  "root": false,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "../../.eslintrc.json",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

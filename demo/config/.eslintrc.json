@@ -1,0 +1,10 @@
+{
+  "root": false,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "../../.eslintrc.json"
+  ]
+}

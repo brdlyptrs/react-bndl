@@ -1,0 +1,11 @@
+{
+  "name": "@demo/config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "scripts": {
+    "fix:lint": "pnpm --filter @app/* run fix:lint",
+    "test:lint": "pnpm --filter @app/* run test:lint"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@bndl/lib",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "node ./esbuild.bundle.js",
+    "fix:lint": "eslint -c .eslintrc.json --fix ./",
+    "test:lint": "eslint -c .eslintrc.json ./",
+    "test:types": "tsc --project ./tsconfig.json",
+    "test:components": "jest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@swc/core": "^1.3.36",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "^18.11.18",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "esbuild": "0.17.18",
+    "eslint-plugin-react": "^7.32.2",
+    "expect": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-styled-components": "^7.1.1",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0"
+  }
+}

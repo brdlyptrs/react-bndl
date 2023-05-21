@@ -1,0 +1,44 @@
+{
+  "name": "@bndl/demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"pnpm --filter @demo/app run start\" \"pnpm --filter @demo/server run start\"",
+    "start:server": "pnpm --filter @demo/server run start",
+    "build:dev": "pnpm --filter @demo/app run build:dev",
+    "build:prod": "pnpm --filter @demo/app run build:prod",
+    "fix:lint": "pnpm --filter @demo/* run fix:lint",
+    "test:lint": "pnpm --filter @demo/* run test:lint",
+    "test:types": "pnpm --filter @demo/* run test:types"
+  },
+  "dependencies": {
+    "@bndl/lib": "workspace:^1.0.0",
+    "@demo/app": "workspace:^1.0.0",
+    "@demo/config": "workspace:^",
+    "@demo/server": "workspace:^1.0.0",
+    "koa": "^2.14.1",
+    "koa-mount": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2"
+  },
+  "devDependencies": {
+    "@koa/router": "^12.0.0",
+    "@swc/core": "^1.3.41",
+    "@types/node": "^18.11.18",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "concurrently": "^7.6.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.39.0",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.21",
+    "swc-loader": "^0.2.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "wait-file": "^1.0.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@demo/app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "pnpm run build:dev",
+    "build:dev": "node ./scripts/dev.build.js",
+    "build:prod": "MODE=production pnpm --filter @app/vendors run build && pnpm --filter @app/components --filter @app/views --filter @app/main run build",
+    "fix:lint": "pnpm --filter @app/* run fix:lint",
+    "test:lint": "pnpm --filter @app/* run test:lint",
+    "test:types": "pnpm --filter @app/* run test:types"
+  },
+  "dependencies": {
+    "@app/components": "workspace:^1.0.0",
+    "@app/vendors": "workspace:^1.0.0",
+    "@app/main": "workspace:^1.0.0",
+    "@app/views": "workspace:^1.0.0",
+    "@bndl/lib": "workspace:^1.0.0",
+    "@demo/config": "workspace:^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.41",
+    "@types/node": "^18.11.18",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "concurrently": "^7.6.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.39.0",
+    "eslint-plugin-react": "^7.32.2",
+    "html-webpack-plugin": "^5.5.0",
+    "swc-loader": "^0.2.3",
+    "typescript": "^5.0.2",
+    "wait-file": "^1.0.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

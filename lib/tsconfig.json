@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.base.json",
+
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+
+  "types": [
+    "node",
+    "jest",
+    "@testing-library/jest-dom"
+  ],
+
+  "include": [
+    "./jest.setup.ts",
+    "./src/**/*"
+  ],
+
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true,
+    "esm": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@demo/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "fix:lint": "eslint -c .eslintrc.json --fix",
+    "test:lint": "eslint -c .eslintrc.json",
+    "test:types": "tsc --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "@demo/config": "workspace:^1.0.0",
+    "@koa/router": "^12.0.0",
+    "koa": "^2.14.1",
+    "koa-mount": "^4.0.0",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.41",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "eslint": "^8.39.0",
+    "nodemon": "^2.0.21"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "react-bndl",
+  "version": "1.0.0",
+  "description": "A library that allows users to split their React application into multiple bundles and load them each dynamically.",
+  "keywords": ["React", "bundle", "Webpack"],
+  "author": "Bradley Peters",
+  "license": "MIT",
+  "bugs": "https://github.com/brdlyptrs/react-bndl/issues",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "exports": {
+    "import": "dist/index.mjs",
+    "require": "dis/index.cjs"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/README.md",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brdlyptrs/react-bndl.git",
+    "directory": "lib"
+  },
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "scripts": {
+    "start": "pnpm --filter @bndl/demo run start",
+    "build:lib": "pnpm --filter @bndl/lib run build",
+    "build:app": "pnpm --filter @bndl/demo run build:prod",
+    "fix:lint": "pnpm --filter @bndl/* run fix:lint",
+    "test:lint": "pnpm --filter @bndl/* run test:lint",
+    "test:types": "pnpm --filter @bndl/* run test:types",
+    "test:components": "pnpm --filter @bndl/lib run test:components",
+    "test:integration": "playwright test -c playwright-ct.config.ts",
+    "test:end-to-end": "playwright test -c playwright.config.ts"
+  },
+  "dependencies": {
+    "@bndl/demo": "workspace:^",
+    "@bndl/lib": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.33.0",
+    "@playwright/test": "^1.33.0",
+    "@types/node": "^18.11.18"
+  }
+}

@@ -1,0 +1,10 @@
+name: Setup environment and dependencies
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Install dependencies
+      uses: ./.github/actions/install
+    - name: Install playwright browsers
+      uses: ./.github/actions/playwright

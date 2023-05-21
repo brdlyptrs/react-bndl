@@ -1,0 +1,37 @@
+{
+  "name": "@app/views",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "webpack",
+    "fix:lint": "eslint -c .eslintrc.json --fix ./",
+    "test:lint": "eslint -c .eslintrc.json ./",
+    "test:types": "tsc --project ./tsconfig.json"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./webpack.config": "./webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2"
+  },
+  "devDependencies": {
+    "@demo/config": "workspace:^1.0.0",
+    "@swc/core": "^1.3.32",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@types/webpack": "^5.28.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.39.0",
+    "swc-loader": "^0.2.3",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
