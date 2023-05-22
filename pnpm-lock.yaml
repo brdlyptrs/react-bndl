@@ -4,12 +4,6 @@ importers:
 
   .:
     dependencies:
-      '@bndl/demo':
-        specifier: workspace:^
-        version: link:demo
-      '@bndl/lib':
-        specifier: workspace:^
-        version: link:lib
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -17,6 +11,12 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@bndl/demo':
+        specifier: workspace:^
+        version: link:demo
+      '@bndl/lib':
+        specifier: workspace:^
+        version: link:lib
       '@playwright/experimental-ct-react':
         specifier: ^1.33.0
         version: 1.33.0(@types/node@18.11.18)(vite@4.3.8)

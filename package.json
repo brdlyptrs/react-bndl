@@ -2,7 +2,11 @@
   "name": "react-bndl",
   "version": "1.0.0",
   "description": "A library that allows users to split their React application into multiple bundles and load them each dynamically.",
-  "keywords": ["React", "bundle", "Webpack"],
+  "keywords": [
+    "React",
+    "bundle",
+    "Webpack"
+  ],
   "author": "Bradley Peters",
   "license": "MIT",
   "bugs": "https://github.com/brdlyptrs/react-bndl/issues",
@@ -38,12 +42,12 @@
     "test:end-to-end": "playwright test -c playwright.config.ts"
   },
   "dependencies": {
-    "@bndl/demo": "workspace:^",
-    "@bndl/lib": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@bndl/demo": "workspace:^",
+    "@bndl/lib": "workspace:^",
     "@playwright/experimental-ct-react": "^1.33.0",
     "@playwright/test": "^1.33.0",
     "@types/node": "^18.11.18"
