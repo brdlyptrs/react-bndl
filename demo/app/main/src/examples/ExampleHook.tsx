@@ -12,7 +12,7 @@ export const ExampleHook = () => {
     <>
       {(isLoading && !data) ?
         <div>Loading</div> :
-        (!isLoading && error) ?
+        (error || (!isLoading && !data)) ?
           <div>{error.message}</div> :
           <DynamicComponent component={data}>
             Dynamic Component

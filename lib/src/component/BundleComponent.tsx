@@ -44,7 +44,7 @@ export function BundleComponent({ path, name, component, children, LoaderCompone
 
   if (isLoading && !data)
     return renderLoader();
-  if (error || !data && !isLoading)
+  if (error || (!data && !isLoading))
     return renderError(error);
   else
     return (
