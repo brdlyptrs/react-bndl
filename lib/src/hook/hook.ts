@@ -25,7 +25,8 @@ interface IStatus {
 export const bundles = new Map<string, IBundle>();
 
 export function useBundle({ path, name, component }:IProps) {
-  const [status, setStatus] = React.useState<IStatus>({ isLoading: false, error: null, data: null });
+  const bundleExists = bundles.get(name);
+  const [status, setStatus] = React.useState<IStatus>({ isLoading: !bundleExists, error: null, data: null });
 
   const scope = getScope();
 

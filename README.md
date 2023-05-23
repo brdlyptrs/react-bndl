@@ -133,6 +133,7 @@ Run [demo application](./demo/app) in development mode to test [react-bndl libra
 
 #### Scripts
 - `start`: Starts development server and builds demo application in development mode
+- `start`: Starts development server only
 - `build:lib`: Create production distribution that exports a CommonJS and ESM version of the react-bndl library
 - `build:app`: Create a production bundle of the demo application
 - `fix:lint`: Attempt to fix any lint errors
