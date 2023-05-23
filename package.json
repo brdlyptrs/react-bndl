@@ -1,6 +1,6 @@
 {
   "name": "react-bndl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library that allows users to split their React application into multiple bundles and load them each dynamically.",
   "keywords": [
     "React",
