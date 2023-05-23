@@ -3,10 +3,12 @@ name: Pull Request
 on:
   push:
     branches:
-    - !main
+      - '**'
+      - '!main'
   pull_request:
     branches:
-    - !main
+      - '**'
+      - '!main'
 
 env:
   CI: true
