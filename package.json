@@ -51,6 +51,6 @@
     "@bndl/lib": "workspace:^",
     "@playwright/experimental-ct-react": "^1.33.0",
     "@playwright/test": "^1.33.0",
-    "@types/node": "^18.11.18"
+    "@types/node": "^25.0.10"
   }
 }
