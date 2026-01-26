@@ -11,10 +11,10 @@
   "license": "MIT",
   "bugs": "https://github.com/brdlyptrs/react-bndl/issues",
   "type": "module",
-  "main": "dist/index.mjs",
+  "main": "./dist/index.mjs",
   "exports": {
-    "import": "dist/index.mjs",
-    "require": "dis/index.cjs"
+    "import": "./dist/index.mjs",
+    "require": "./dis/index.cjs"
   },
   "files": [
     "LICENSE",
