@@ -8,6 +8,9 @@ on:
 env:
   CI: true
 
+permissions:
+  contents: read
+
 jobs:
 
   setup:
@@ -16,7 +19,9 @@ jobs:
 
     steps:
       - name: Check out branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Setup environment and dependencies
         uses: ./.github/actions/setup
 
@@ -28,7 +33,9 @@ jobs:
 
     steps:
       - name: Check out branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Setup environment and dependencies
         uses: ./.github/actions/setup
       - name: Run Build
@@ -36,7 +43,7 @@ jobs:
         env:
           BUILD: production
       - run: pnpm run test:integration
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         if: always()
         with:
           name: playwright-results
