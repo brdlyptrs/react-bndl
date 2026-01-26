@@ -1,6 +1,6 @@
 {
   "name": "react-bndl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library that allows users to split their React application into multiple bundles and load them each dynamically.",
   "keywords": [
     "React",
@@ -11,10 +11,10 @@
   "license": "MIT",
   "bugs": "https://github.com/brdlyptrs/react-bndl/issues",
   "type": "module",
-  "main": "dist/index.mjs",
+  "main": "./dist/index.mjs",
   "exports": {
-    "import": "dist/index.mjs",
-    "require": "dis/index.cjs"
+    "import": "./dist/index.mjs",
+    "require": "./dis/index.cjs"
   },
   "files": [
     "LICENSE",
