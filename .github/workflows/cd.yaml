@@ -4,6 +4,9 @@ on:
   release:
     types: [ released ]
 
+permissions:
+  contents: read
+
 jobs:
 
   publish:
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Check out branch
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Setup environment and dependencies
         uses: ./.github/actions/setup
       - name: Build lib
@@ -22,6 +27,6 @@ jobs:
           BUILD: production
       - name: Publish package
         shell: bash
-        run: pnpm publish --no-git-checks
+        run: pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN  }}
