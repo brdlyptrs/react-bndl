@@ -67,7 +67,7 @@ jobs:
         uses: ./.github/actions/setup
       - run: pnpm run build:app
       - run: pnpm run test:end-to-end
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
           name: playwright-results
