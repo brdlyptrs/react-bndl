@@ -5,6 +5,7 @@ on:
     types: [ released ]
 
 permissions:
+  id-token: write  # Required for OIDC
   contents: read
 
 jobs:
@@ -28,5 +29,3 @@ jobs:
       - name: Publish package
         shell: bash
         run: pnpm publish --no-git-checks --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN  }}
